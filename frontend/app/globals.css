@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #0a0a16;
+  color: #e4e4f0;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+body {
+  background-image:
+    linear-gradient(rgba(124, 111, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 111, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  min-height: 100vh;
+}
+
+::selection {
+  background: #7c6fff55;
+}
+
+button {
+  font-family: inherit;
+}
+
+textarea:focus, button:focus {
+  outline: 2px solid #7c6fff88;
+  outline-offset: 2px;
+}
+
+@keyframes nodeIn {
+  from { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+  to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.3; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scanline {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
